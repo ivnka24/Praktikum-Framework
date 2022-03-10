@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Test from './lifeCycle';
 import Loginform from './Login/formlogin';
+import HelloComponent from './HelloComponent';
 
 class StateFullComponent extends Component{
   render(){
