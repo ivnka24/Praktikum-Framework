@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
 import App from './App';
+import Mahasiswa from "./container/Mahasiswa/Mahasiswa"
 import reportWebVitals from './reportWebVitals';
 
 import BlogPost from "./container/BlogPost/BlogPost";
 
 ReactDOM.render(
-  <BlogPost />,
+  // <BlogPost />,
+  <Mahasiswa />,
   document.getElementById('content')
 );
 
