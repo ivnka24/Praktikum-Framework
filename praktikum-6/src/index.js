@@ -10,15 +10,20 @@ import {
   compose
 } from 'redux'
 import MainReducer from './reducers/MainReducer'
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Table from './containers/Table';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>
   f)(createStore)(MainReducer)
+
+
 ReactDOM.render(
   <Provider store = {store}>
-    <App/>
+    <Table/>
   </Provider>, 
-document.getElementById('root'));
+document.getElementById('root')
+);
 
 reportWebVitals();
