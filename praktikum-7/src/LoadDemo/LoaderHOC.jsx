@@ -1,4 +1,5 @@
-import  React,  {  Component  }  from  'react'; import  './LoadIndicator.css';
+import  React,  {  Component  }  from  'react'; 
+import  './LoaderIndicator.css';
 
 const  isEmpty  =  (prop)  =>  ( prop === null ||
 prop  ===  undefined  ||

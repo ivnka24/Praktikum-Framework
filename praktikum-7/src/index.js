@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CustomFormDemo from './CustomForm/CustomFormDemo';
+import LoaderDemo from './LoadDemo/LoaderDemo';
+import GenericContainerDemo from './GenericContainer/GenericContainerDemo';
+import RequireAuthDemo from './ProtectedRoutes/RequireAuthDemo';
+import RefsDemo from './RefsDemo/RefsDemo';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <CustomFormDemo/>,
+  // <LoaderDemo/>,
+  // <GenericContainerDemo/>,
+  // <RequireAuthDemo/>,
+  <RefsDemo/>,
   document.getElementById('root')
 );
 

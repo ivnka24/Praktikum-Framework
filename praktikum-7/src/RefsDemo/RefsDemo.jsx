@@ -1,4 +1,5 @@
-import  React,  {  Component  }  from  'react'; import  RefsHOC  from  './RefsHOC.jsx';
+import  React,  {  Component  }  from  'react';
+ import  RefsHOC  from  './RefsHOC.jsx';
 
 
 
