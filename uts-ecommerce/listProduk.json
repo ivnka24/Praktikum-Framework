@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nama": "LG"
+    },
+    {
+      "id": 2,
+      "nama": "SAMSUNG"
+    },
+    {
+      "id": 3,
+      "nama": "SONY"
+    },
+    {
+      "id": 4,
+      "nama": "PANASONIC"
+    },
+    {
+      "id": 5,
+      "nama": "SHARP"
+    },
+    {
+      "id": 6,
+      "nama": "POLYTRON"
+    },
+    {
+      "id": 7,
+      "nama": "PHILIPS"
+    },
+    {
+      "id": 8,
+      "nama": "CHANGHONG"
+    }
+  ],
+  "produk": [
+    {
+      "id": 1,
+      "nama": "LG C1 OLED Series 48 Inch",
+      "harga": 20000000,
+      "stok": 20,
+      "gambar": "./images/LGC1.jpg",
+      "category": {
+        "id": 1,
+        "nama": "LG"
+      }
+    },
+    {
+      "id": 2,
+      "nama": "Samsung LED Curved TV 49 Inch",
+      "harga": 15000000,
+      "stok": 20,
+      "gambar": "./images/samsungcurved.jpg",
+      "category": {
+        "id": 2,
+        "nama": "SAMSUNG"
+      }
+    },
+    {
+      "id": 3,
+      "nama": "Sony LED TV 32 Inch",
+      "harga": 4800000,
+      "stok": 20,
+      "gambar": "./images/sonyled.jpg",
+      "category": {
+        "id": 3,
+        "nama": "SONY"
+      }
+    },
+    {
+      "id": 4,
+      "nama": "Sony LED TV 48 Inch",
+      "harga": 10198500,
+      "stok": 20,
+      "gambar": "./images/sonyled48.jpg",
+      "category": {
+        "id": 3,
+        "nama": "SONY"
+      }
+    },
+    {
+      "id": 5,
+      "nama": "LG LED TV 55 Inch",
+      "harga": 18375000,
+      "stok": 20,
+      "gambar": "./images/lgledtv55.jpg",
+      "category": {
+        "id": 1,
+        "nama": "LG"
+      }
+    },
+    {
+      "id": 6,
+      "nama": "Panasonic LED TV 32 Inch",
+      "harga": 3375000,
+      "stok": 20,
+      "gambar": "./images/panasonicledtv32.jpg",
+      "category": {
+        "id": 4,
+        "nama": "PANASONIC"
+      }
+    },
+    {
+      "id": 7,
+      "nama": "Sharp LED TV 32 Inch",
+      "harga": 3298500,
+      "stok": 20,
+      "gambar": "./images/sharpledtv32.jpg",
+      "category": {
+        "id": 5,
+        "nama": "SHARP"
+      }
+    },
+    {
+      "id": 8,
+      "nama": "Polytron LED TV 20 Inch",
+      "harga": 2098500,
+      "stok": 20,
+      "gambar": "./images/polytronledtv20.jpg",
+      "category": {
+        "id": 6,
+        "nama": "POLYTRON"
+      }
+    },
+    {
+      "id": 9,
+      "nama": "Changhong LED TV 32 Inch",
+      "harga": 4543500,
+      "stok": 20,
+      "gambar": "./images/changhongled.jpg",
+      "category": {
+        "id": 8,
+        "nama": "CHANGHONG"
+      }
+    },
+    {
+      "id": 10,
+      "nama": "Philips LED TV 32 Inch",
+      "harga": 3148500,
+      "stok": 20,
+      "gambar": "./images/philipsledtv32.jpg",
+      "category": {
+        "id": 7,
+        "nama": "PHILIPS"
+      }
+    }
+  ],
+  "keranjangs": [
+    {
+      "jumlah": 1,
+      "total_harga": 20000000,
+      "produk": {
+        "id": 1,
+        "nama": "LG C1 OLED Series 48 Inch",
+        "harga": 20000000,
+        "is_ready": true,
+        "gambar": "./images/LGC1.jpg"
+      }
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 15000000,
+      "produk": {
+        "id": 2,
+        "nama": "Samsung LED Curved TV 49 Inch",
+        "harga": 15000000,
+        "is_ready": true,
+        "gambar": "./images/samsungcurved.jpg"
+      }
+    }
+  ],
+  "pesanans": [
+    {
+      "total_bayar": 14998500,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 4800000,
+          "produk": {
+            "id": 3,
+            "nama": "Sony LED TV 32 Inch",
+            "harga": 4800000,
+            "stok": 20,
+            "gambar": "./images/sonyled.jpg",
+            "category": {
+              "id": 3,
+              "nama": "SONY"
+            }
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 10198500,
+          "produk": {
+            "id": 4,
+            "nama": "Sony LED TV 48 Inch",
+            "harga": 10198500,
+            "stok": 20,
+            "gambar": "./images/sonyled48.jpg",
+            "category": {
+              "id": 3,
+              "nama": "SONY"
+            }
+          },
+          "id": 2
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
