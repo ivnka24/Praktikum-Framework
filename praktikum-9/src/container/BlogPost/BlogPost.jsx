@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './BlogPost.css';
 import Post from "../../Component/BlogPost/Post";
+import API from "../../services";
 class BlogPost extends Component {
     state = {
         listArtikel: [],
@@ -43,7 +44,7 @@ class BlogPost extends Component {
 
     //tombol simpan
     handleTombolSimpan = () => {  //fungsi untuk menghandle tombol simpan
-        API.postNewBlog(this.state.InsertArtikel) // mengirim data ke API
+        API.postNewsBlog(this.state.insertArtikel) // mengirim data ke API
             .then((res) => { // response dari API dalam bentuk JSON
                 this.ambilDataDariServerAPI() // ambil data dari server API
             })
