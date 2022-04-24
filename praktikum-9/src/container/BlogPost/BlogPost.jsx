@@ -24,9 +24,9 @@ class BlogPost extends Component {
         this.ambilDataDariServerAPI()    
     }
     
-    handleHapusArtikel = (data) => {
-        fetch(`http://localhost:3001/posts/${data}`, {method: 'DELETE'})
-            .then(res => {
+    handleHapusArtikel = (data) => { // fungsi yang akan di panggil ketika tombol hapus di klik
+        API.deleteNewsBlog(data)
+            .then(result => {
                 this.ambilDataDariServerAPI()
             })
     }
@@ -41,18 +41,13 @@ class BlogPost extends Component {
         });
     }
 
-    handleTombolSimpan = () => {
-        fetch('http://localhost:3001/posts', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertArtikel)
-        })
-            .then((Response) => {
-                this.ambilDataDariServerAPI();
+    //tombol simpan
+    handleTombolSimpan = () => {  //fungsi untuk menghandle tombol simpan
+        API.postNewBlog(this.state.InsertArtikel) // mengirim data ke API
+            .then((res) => { // response dari API dalam bentuk JSON
+                this.ambilDataDariServerAPI() // ambil data dari server API
             })
+
     }
 
     render() {
