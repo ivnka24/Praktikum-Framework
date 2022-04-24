@@ -13,13 +13,11 @@ class BlogPost extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3001/posts')
-            .then(response => response.json())
-            .then(jsonHasilAmbilDariAPI => {
-                this.setState({
-                    listArtikel: jsonHasilAmbilDariAPI
-                })
+        API.getNewsBlog().then(result => {
+            this.setState({
+                listArtikel: result
             })
+        })
     }
 
     componentDidMount() {
