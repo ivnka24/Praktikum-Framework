@@ -9,8 +9,8 @@ import reportWebVitals from './reportWebVitals';
 import BlogPost from "./container/BlogPost/BlogPost";
 
 ReactDOM.render(
-  // <BlogPost />,
-  <Mahasiswa />,
+  <BlogPost />,
+  // <Mahasiswa />,
   document.getElementById('content')
 );
 
