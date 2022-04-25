@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Post from "../../Component/Mahasiswa/Post";
+import API from "../../services";
 class Mahasiswa extends Component {
     state = {
         listMahasiswa: [],
@@ -16,22 +17,21 @@ class Mahasiswa extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3001/mahasiswa')
-            .then(response => response.json())
-            .then(jsonHasilAmbilDariAPI => {
-                this.setState({
-                    listMahasiswa: jsonHasilAmbilDariAPI
-                })
+        API.getMahasiswa().then(result => {
+            this.setState({
+                listMahasiswa: result
             })
+        })
     }
 
     componentDidMount() {
         this.ambilDataDariServerAPI()    
     }
     
-    handleHapusMahasiswa = (data) => {
-        fetch(`http://localhost:3001/mahasiswa/${data}`, {method: 'DELETE'})
-            .then(res => {
+    // handle delete button
+    handleHapusMahasiswa = (data) => { // fungsi yang akan di panggil ketika tombol hapus di klik
+        API.deleteMahasiswa(data)
+            .then(result => {
                 this.ambilDataDariServerAPI()
             })
     }
@@ -46,19 +46,13 @@ class Mahasiswa extends Component {
         });
     }
 
-    handleTombolSimpan = () => {
-        fetch('http://localhost:3001/mahasiswa', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertMahasiswa)
-        })
-            .then((Response) => {
-                this.ambilDataDariServerAPI();
-            })
-    }
+        // tombol simpan
+        handleTombolSimpan = () => {  //fungsi untuk menghandle tombol simpan
+            API.postMahasiswa(this.state.insertMahasiswa) // mengirim data ke API
+                .then((res) => { // response dari API dalam bentuk JSON
+                    this.ambilDataDariServerAPI() // ambil data dari server API
+                })
+        }
 
     render() {
         return(

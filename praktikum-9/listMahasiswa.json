@@ -1,26 +1,6 @@
 {
   "mahasiswa": [
     {
-      "id": 1,
-      "userId": 1,
-      "NIM": 180823453,
-      "nama": "Mahasiswa 1",
-      "alamat": "Jl. Soekarno Hatta No. 9 Malang",
-      "hp": "081802023249",
-      "angkatan": 2018,
-      "status": "aktif"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "NIM": 140823453,
-      "nama": "Mahasiswa X",
-      "alamat": "Jl. Menur No. 9 Surabaya",
-      "hp": "081802023523",
-      "angkatan": 2014,
-      "status": "lulus"
-    },
-    {
       "userId": 1,
       "id": 1647265203286,
       "NIM": "1941720182",
@@ -29,6 +9,16 @@
       "hp": "0811301242421",
       "angkatan": "2019",
       "status": "Aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1650887947025,
+      "NIM": "192112",
+      "nama": "vanka",
+      "alamat": "probolinggo",
+      "hp": "081331094004",
+      "angkatan": "2019",
+      "status": "aktif"
     }
   ]
 }
