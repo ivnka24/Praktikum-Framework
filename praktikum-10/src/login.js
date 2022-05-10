@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from './index';
+import React, { useState, useContext } from "react";
+import { AuthContext } from "./index";
+import firebase from 'firebase/compat/app';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -11,6 +12,15 @@ const Login = () => {
         e.preventDefault();
         console.log(Auth)
         Auth.setLoggedIn(true);
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            })
+            .catch(e => {
+                setError(e.message);
+            })
     }
 
     return (
