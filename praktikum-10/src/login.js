@@ -1,6 +1,8 @@
-import React, { useState, useContext } from "react";
-import { AuthContext } from "./index";
+import React, { useState, useContext } from 'react';
+import { AuthContext } from './index';
 import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -10,8 +12,6 @@ const Login = () => {
     const Auth = useContext(AuthContext);
     const handleForm = e => {
         e.preventDefault();
-        console.log(Auth)
-        Auth.setLoggedIn(true);
         firebase
             .auth()
             .signInWithEmailAndPassword(email, password)
@@ -22,6 +22,25 @@ const Login = () => {
                 setError(e.message);
             })
     }
+
+    const onLogin = () => {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+                /** @type {firebase.auth.OAuthCredential} */
+                var credential = result.credential;
+
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = credential.accessToken;
+                // The signed-in user info.
+                var user = result.user;
+                if (result.user) Auth.setLoggedIn(true);
+            }).catch((error) => {
+                console.log(error)
+            });
+    }
+
 
     return (
         <div>
@@ -42,7 +61,7 @@ const Login = () => {
                     placeholder="password"
                 />
                 <hr />
-                <button className='googleBtn' type="submit">
+                <button className='googleBtn' type="submit" onClick={onLogin}>
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                         alt="logo"
@@ -56,4 +75,4 @@ const Login = () => {
     )
 }
 
-export default Login; 
+export default Login;

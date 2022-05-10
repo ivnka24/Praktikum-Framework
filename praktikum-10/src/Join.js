@@ -21,6 +21,24 @@ const Join = () => {
         })
 }
 
+const onLogin = () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            if (result.user) Auth.setLoggedIn(true);
+        }).catch((error) => {
+            console.log(error)
+        });
+}
+
 
     return (
         <div>
