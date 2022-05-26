@@ -1,0 +1,24 @@
+{
+  "mahasiswa": [
+    {
+      "userId": 1,
+      "id": 1647265203286,
+      "NIM": "1941720182",
+      "nama": "Ivanka",
+      "alamat": "Paiton",
+      "hp": "0811301242421",
+      "angkatan": "2019",
+      "status": "Aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1650887947025,
+      "NIM": "192112",
+      "nama": "vanka",
+      "alamat": "probolinggo",
+      "hp": "081331094004",
+      "angkatan": "2019",
+      "status": "aktif"
+    }
+  ]
+}
