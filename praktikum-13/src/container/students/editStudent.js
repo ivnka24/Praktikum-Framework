@@ -1,4 +1,3 @@
-/* ------- editStudent.js ----------- */
 import React, { Component } from "react";
 import {
     Button,
@@ -10,6 +9,7 @@ import {
     Label,
     Input,
 } from "reactstrap";
+
 export default class editStudent extends Component {
     render() {
         return (
@@ -40,6 +40,7 @@ export default class editStudent extends Component {
                                 onChange={this.props.onChangeEditStudentHanler}
                             />
                         </FormGroup>
+
                         <FormGroup>
                             <Label for="email">Email</Label>
                             <Input

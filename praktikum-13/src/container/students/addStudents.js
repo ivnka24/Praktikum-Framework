@@ -1,4 +1,3 @@
-/*----- addStudent.js ---------*/
 import React, { Component } from "react";
 import {
     Button,
@@ -10,6 +9,7 @@ import {
     Label,
     Input,
 } from "reactstrap";
+
 export default class addStudents extends Component {
     render() {
         return (
@@ -47,6 +47,7 @@ export default class addStudents extends Component {
                                 onChange={this.props.onChangeAddStudentHandler}
                             />
                         </FormGroup>
+
                         <FormGroup>
                             <Label for="email">Email</Label>
                             <Input
@@ -67,12 +68,10 @@ export default class addStudents extends Component {
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={() =>
-                            this.props.addStudent()}>
+                        <Button color="primary" onClick={() => this.props.addStudent()}>
                             Add
                         </Button>{" "}
-                        <Button color="secondary"
-                            onClick={this.props.toggleNewStudentModal}>
+                        <Button color="secondary" onClick={this.props.toggleNewStudentModal}>
                             Cancel
                         </Button>
                     </ModalFooter>

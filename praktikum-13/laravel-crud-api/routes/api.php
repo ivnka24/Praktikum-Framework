@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,14 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post("create-student","App\Http\Controllers\StudentController@createStudent");
 
-Route::post("create-student","StudentController@createStudent");
+Route::get("students", "App\Http\Controllers\StudentController@studentsListing");
 
-Route::get("students", "StudentController@studentsListing");
+Route::get("student/{id}", "App\Http\Controllers\StudentController@studentDetail");
 
-Route::get("student/{id}", "StudentController@studentDetail");
-
-Route::delete("student/{id}", "StudentController@studentDelete");
+Route::delete("student/{id}", "App\Http\Controllers\StudentController@studentDelete");
